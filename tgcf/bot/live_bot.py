@@ -145,7 +145,7 @@ def get_events():
         "remove": (remove_command_handler, events.NewMessage(pattern=f"{_}remove")),
         "style": (style_command_handler, events.NewMessage(pattern=f"{_}style")),
         "help": (help_command_handler, events.NewMessage(pattern=f"{_}help")),
-        "chatinfo": (help_command_handler, events.NewMessage(pattern=f"{_}chatinfo")),
+        "chatinfo": (chatinfo_command_handler, events.NewMessage(pattern=f"{_}chatinfo")),
     }
 
     return command_events
