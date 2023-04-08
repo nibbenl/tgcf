@@ -5,6 +5,7 @@ COMMANDS = {
     "forward": "Set a new forward",
     "remove": "Remove an existing forward",
     "help": "Learn usage",
+    "chatinfo": "Get chat ID",
 }
 
 REGISTER_COMMANDS = True
