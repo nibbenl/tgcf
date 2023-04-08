@@ -132,9 +132,8 @@ async def help_command_handler(event):
 
 async def chatinfo_command_handler(event):
     """Handle the /chatinfo command."""
-    chat_id = get_args(event.chat_id)
-    await event.respond (f"{chat_id}\n")
-
+    chat_id = event.chat_id
+    await event.respond('ChatID: {}'.format(chat_id))
 
 def get_events():
     _ = get_command_prefix()
