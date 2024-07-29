@@ -73,6 +73,7 @@ if check_password(st):
             CONFIG.pid = 0
             write_config(CONFIG)
             time.sleep(1)
+            st.rerun()
 
         stop = st.button("Stop", type="primary")
         if stop:
@@ -99,6 +100,7 @@ if check_password(st):
         write_config(CONFIG)
         time.sleep(2)
 
+        st.rerun()
 
     try:
         lines = st.slider(
