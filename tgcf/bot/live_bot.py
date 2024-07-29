@@ -130,6 +130,11 @@ async def help_command_handler(event):
     """Handle the /help command."""
     await event.respond(CONFIG.bot_messages.bot_help)
 
+async def chatid_command_handler(event):
+    """Handle the /chatid command."""
+    chat_id = event.chat_id
+    await event.respond('ChatID: `{}`'.format(chat_id))
+
 
 def get_events():
     _ = get_command_prefix()
@@ -140,6 +145,7 @@ def get_events():
         "remove": (remove_command_handler, events.NewMessage(pattern=f"{_}remove")),
         "style": (style_command_handler, events.NewMessage(pattern=f"{_}style")),
         "help": (help_command_handler, events.NewMessage(pattern=f"{_}help")),
+        "chatid": (chatid_command_handler, events.NewMessage(pattern=f"{_}chatid")),
     }
 
     return command_events
